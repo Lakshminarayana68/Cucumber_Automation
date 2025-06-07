@@ -128,7 +128,7 @@
                 <version>3.2.5</version>
                 <configuration>
                     <includes>
-                        <include>**/TestRunner.java</include>
+                        <include>testNg.xml</include>
                     </includes>
                 </configuration>
             </plugin>
