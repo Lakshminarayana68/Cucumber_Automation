@@ -7,6 +7,7 @@
   <name>Selenium Cucumber Framework</name>
   
       <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <cucumber.version>7.15.0</cucumber.version>
