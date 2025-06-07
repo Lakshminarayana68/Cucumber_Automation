@@ -67,10 +67,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-<<<<<<< HEAD
-            
-=======
->>>>>>> 1bc314604cff0a0a6b4d98e2e220167f5c35b96c
         </dependency>
 
         <!-- Extent Reports -->
