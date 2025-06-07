@@ -127,7 +127,7 @@
                 <version>3.2.5</version>
                 <configuration>
                     <includes>
-                        <include>testNg.xml</include>
+                        <include>testng.xml</include>
                     </includes>
                 </configuration>
             </plugin>
