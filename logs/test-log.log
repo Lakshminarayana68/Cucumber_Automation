@@ -445,3 +445,49 @@
 2025-06-05 20:21:02 INFO  LoggerUtil:18 - User navigated to the home page
 2025-06-05 20:21:05 INFO  LoggerUtil:18 - Browser closed after scenario.
 2025-06-05 20:21:05 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-06 15:57:09 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-06 15:57:09 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-06 15:57:09 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-06 15:57:09 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-06 15:57:09 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-06 15:57:09 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-06 15:57:09 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-06 15:57:10 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-06 15:57:10 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-06 15:57:18 INFO  LoggerUtil:18 - User launches app
+2025-06-06 15:57:20 INFO  LoggerUtil:18 - User launches app
+2025-06-06 15:57:20 INFO  LoggerUtil:18 - User launches app
+2025-06-06 15:57:21 INFO  LoggerUtil:18 - User launches app
+2025-06-06 15:57:21 INFO  LoggerUtil:18 - User launches app
+2025-06-06 15:57:26 INFO  LoggerUtil:18 - User navigated to home page
+2025-06-06 15:57:27 INFO  LoggerUtil:18 - User navigated to home page
+2025-06-06 15:57:27 INFO  LoggerUtil:18 - User navigated to home page
+2025-06-06 15:57:27 INFO  LoggerUtil:18 - User navigated to home page
+2025-06-06 15:57:27 INFO  LoggerUtil:18 - Browser closed after scenario.
+2025-06-06 15:57:27 INFO  LoggerUtil:18 - User navigated to home page
+2025-06-06 15:57:27 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-06 15:57:28 INFO  LoggerUtil:18 - user navigates to login page
+2025-06-06 15:57:28 INFO  LoggerUtil:18 - user navigates to login page
+2025-06-06 15:57:29 INFO  LoggerUtil:18 - user navigates to login page
+2025-06-06 15:57:29 INFO  LoggerUtil:18 - user navigates to login page
+2025-06-06 15:57:31 INFO  LoggerUtil:18 - User navigated to the home page
+2025-06-06 15:57:33 INFO  LoggerUtil:18 - User navigated to the home page
+2025-06-06 15:57:35 INFO  LoggerUtil:18 - Browser closed after scenario.
+2025-06-06 15:57:35 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-06 15:57:35 INFO  LoggerUtil:18 - User navigated to the home page
+2025-06-06 15:57:35 INFO  LoggerUtil:18 - User navigated to the home page
+2025-06-06 15:57:35 INFO  LoggerUtil:18 - verfying category List
+2025-06-06 15:57:35 INFO  LoggerUtil:18 - Browser closed after scenario.
+2025-06-06 15:57:35 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-06 15:57:35 INFO  LoggerUtil:18 - verfying brand List
+2025-06-06 15:57:36 INFO  LoggerUtil:18 - Browser closed after scenario.
+2025-06-06 15:57:36 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-06 15:57:36 INFO  LoggerUtil:18 - Browser closed after scenario.
+2025-06-06 15:57:36 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-07 20:15:28 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-07 20:16:08 INFO  LoggerUtil:18 - User launches app
+2025-06-07 20:16:14 INFO  LoggerUtil:18 - User navigated to home page
+2025-06-07 20:16:16 INFO  LoggerUtil:18 - user navigates to login page
+2025-06-07 20:16:35 INFO  LoggerUtil:18 - User navigated to the home page
+2025-06-07 20:16:39 INFO  LoggerUtil:18 - Browser closed after scenario.
+2025-06-07 20:16:39 INFO  LoggerUtil:18 - ==== Scenario ended ====
