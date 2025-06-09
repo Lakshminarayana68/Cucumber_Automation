@@ -15,10 +15,11 @@ public class Hooks {
 	    }
 
 	    @After
-	    public void afterScenario() {
+	    public void afterScenario() throws InterruptedException {
 	        WebDriver driver = DriverFactory.getDriver();
 	        if (driver != null) {
 	            driver.quit();
+	            Thread.sleep(3000);
 	            LoggerUtil.info("Browser closed after scenario.");
 	        }
 	        LoggerUtil.info("==== Scenario ended ====");

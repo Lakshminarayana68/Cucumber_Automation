@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>4/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jun 06 15:57:08 IST 2025</td>
+<td>Started on:</td><td>Sun Jun 08 21:23:17 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28224 ms)</td>
+<tr><td>Total time:</td><td>142 seconds (142273 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -80,14 +80,14 @@ function toggleAllBoxes() {
 [Home, Products, Cart, Signup / Login, Test Cases, API Testing, Video Tutorials, Contact us],[Home,  Products, Cart, Signup / Login, Test Cases, API Testing, Video Tutorials, Contact us]
 	at stepDefs.HomeSteps.user_verify_Headers(HomeSteps.java:37)
 	at ✽.user verify Headers(file:///C:/JavaLearning/SeleinumCucumber/src/test/resources/features/HomePage.feature:9)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1055502145", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1055502145'><pre>java.lang.AssertionError: Actual headers and expected headers are not matching:
+</pre></div><a href='#' onClick='toggleBox("stack-trace864717930", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace864717930'><pre>java.lang.AssertionError: Actual headers and expected headers are not matching:
 [Home, Products, Cart, Signup / Login, Test Cases, API Testing, Video Tutorials, Contact us],[Home,  Products, Cart, Signup / Login, Test Cases, API Testing, Video Tutorials, Contact us]
 	at stepDefs.HomeSteps.user_verify_Headers(HomeSteps.java:37)
 	at ✽.user verify Headers(file:///C:/JavaLearning/SeleinumCucumber/src/test/resources/features/HomePage.feature:9)
 </pre></div></td>
-<td>18</td>
-<td>runners.ParallelRunner@4802796d</td></tr>
+<td>28</td>
+<td>runners.ParallelRunner@618b19ad</td></tr>
 <tr>
 <td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login with multiple credentials", "Login Functionality Data Driven"</td>
 <td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User is on login page&apos; and 3 other step(s) are undefined.
@@ -122,14 +122,13 @@ public void user_should_see_homepage() {
 	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
 	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
 	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1583357049", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1583357049'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User is on login page&apos; and 3 other step(s) are undefined.
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1259931020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1259931020'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User is on login page&apos; and 3 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
 @Given(&quot;User is on login page&quot;)
@@ -168,17 +167,25 @@ public void user_should_see_homepage() {
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
-	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 </pre></div></td>
-<td>1</td>
-<td>runners.ParallelRunner@4802796d</td></tr>
+<td>0</td>
+<td>runners.ParallelRunner@618b19ad</td></tr>
 <tr>
 <td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login with multiple credentials", "Login Functionality Data Driven"</td>
 <td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User is on login page&apos; and 3 other step(s) are undefined.
@@ -213,14 +220,13 @@ public void user_should_see_homepage() {
 	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
 	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
 	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
-... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace776504450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace776504450'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User is on login page&apos; and 3 other step(s) are undefined.
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1819616861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1819616861'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User is on login page&apos; and 3 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
 @Given(&quot;User is on login page&quot;)
@@ -259,17 +265,25 @@ public void user_should_see_homepage() {
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
-	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 </pre></div></td>
-<td>1</td>
-<td>runners.ParallelRunner@4802796d</td></tr>
+<td>0</td>
+<td>runners.ParallelRunner@618b19ad</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -279,25 +293,25 @@ public void user_should_see_homepage() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add product to cart", "Home page validation"</td>
+<td></td>
+<td>24</td>
+<td>runners.ParallelRunner@618b19ad</td></tr>
+<tr>
+<td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify categories", "Home page validation"</td>
+<td></td>
+<td>29</td>
+<td>runners.ParallelRunner@618b19ad</td></tr>
+<tr>
+<td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify categories", "Home page validation"</td>
+<td></td>
+<td>32</td>
+<td>runners.ParallelRunner@618b19ad</td></tr>
+<tr>
 <td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login verification", "Home page validation"</td>
 <td></td>
 <td>26</td>
-<td>runners.ParallelRunner@4802796d</td></tr>
-<tr>
-<td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify categories", "Home page validation"</td>
-<td></td>
-<td>27</td>
-<td>runners.ParallelRunner@4802796d</td></tr>
-<tr>
-<td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add product to cart", "Home page validation"</td>
-<td></td>
-<td>26</td>
-<td>runners.ParallelRunner@4802796d</td></tr>
-<tr>
-<td title='runners.ParallelRunner.runScenario()'><b>runScenario</b><br>Test class: runners.ParallelRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify categories", "Home page validation"</td>
-<td></td>
-<td>27</td>
-<td>runners.ParallelRunner@4802796d</td></tr>
+<td>runners.ParallelRunner@618b19ad</td></tr>
 </table><p>
 </body>
 </html>

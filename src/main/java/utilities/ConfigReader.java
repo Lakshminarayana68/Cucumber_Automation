@@ -12,7 +12,7 @@ public class ConfigReader {
 
 	    static {
 	        try {
-	            FileInputStream fis = new FileInputStream("C:\\JavaLearning\\SeleinumCucumber\\src\\test\\resources\\config.properties");
+	            FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/config.properties");
 	            prop = new Properties();
 	            prop.load(fis);
 	        } catch (IOException e) {

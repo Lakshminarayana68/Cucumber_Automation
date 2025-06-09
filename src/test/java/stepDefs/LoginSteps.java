@@ -29,7 +29,7 @@ public class LoginSteps  {
 	   
 	    @Given("user launches the browser")
 	    public void user_launches_browser() {
-	        driver = DriverFactory.initDriver("chrome");
+	        driver = DriverFactory.initDriver();
             driver.get(ConfigReader.getProperty("url"));
 	    	
 	        loginPage = new LoginPage(driver);
