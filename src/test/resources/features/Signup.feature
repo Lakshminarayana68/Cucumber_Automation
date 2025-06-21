@@ -14,7 +14,7 @@ Then user wait for 5 seconds
 Then user navigated to "SignUp" page
 When user click on "Male"
 When user enters "password" in "password" field
-When user select "6" from "day" dropdown
+#When user select "6" from "day" dropdown
 When user select "March" from "month" dropdown
 When user select "1997" from "year" dropdown
 When user click on "newsletter"
