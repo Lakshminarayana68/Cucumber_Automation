@@ -164,7 +164,7 @@ public class CommonSteps extends BasePage {
 	    
 	    @When("^user select \"([^\"]*)\" from \"([^\"]*)\" dropdown$")
 	    public void user_Selects_dropdown(String value,String elementName) {
-	    	WebElement element=getElementFromPage(elementName);
+	    	WebElement element=WaitUtils.fluentWait(getElementFromPage(elementName),10);
 	    	Select sc=new Select(element);
 	    	sc.selectByVisibleText(value);
 	    }

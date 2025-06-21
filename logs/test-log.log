@@ -2222,3 +2222,13 @@
 2025-06-21 12:36:54 INFO  LoggerUtil:18 - ==== Scenario ended ====
 2025-06-21 12:36:57 INFO  LoggerUtil:18 - Browser closed after scenario.
 2025-06-21 12:36:57 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-21 12:55:19 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-21 12:55:19 INFO  LoggerUtil:18 - ==== Scenario started ====
+2025-06-21 12:55:34 INFO  LoggerUtil:18 - User launches app
+2025-06-21 12:55:35 INFO  LoggerUtil:18 - User launches app
+2025-06-21 12:55:40 INFO  LoggerUtil:18 - User navigated to home page
+2025-06-21 12:55:41 INFO  LoggerUtil:18 - User navigated to home page
+2025-06-21 12:56:00 INFO  LoggerUtil:18 - Browser closed after scenario.
+2025-06-21 12:56:00 INFO  LoggerUtil:18 - ==== Scenario ended ====
+2025-06-21 12:56:04 INFO  LoggerUtil:18 - Browser closed after scenario.
+2025-06-21 12:56:04 INFO  LoggerUtil:18 - ==== Scenario ended ====
