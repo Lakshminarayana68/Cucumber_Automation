@@ -12,10 +12,17 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.DriverFactory;
 
-public class HomePage {
+
+
    
 	
-	private WebDriver driver;
+	
+
+public class HomePage extends BasePage {
+   
+	
+	//private WebDriver driver;
+
 	
 	@FindBy(xpath="//*[text()='Home']")
 	private WebElement Home;
@@ -47,8 +54,11 @@ public class HomePage {
 	
 	// Signup / Login
 	
-	public HomePage(WebDriver driver) {
-		this.driver=DriverFactory.getDriver();
+
+
+	public HomePage() {
+		super();
+
 		PageFactory.initElements(driver,this);
 	}
 	
@@ -115,5 +125,13 @@ public class HomePage {
 		default: throw new IllegalArgumentException("no such element in this page");
 		}
 	}
-	
+
+
+
+	@Override
+	public boolean pageTitleVerify() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

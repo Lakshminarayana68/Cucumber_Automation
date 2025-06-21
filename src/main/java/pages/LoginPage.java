@@ -1,20 +1,25 @@
 package pages;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 import utilities.DriverFactory;
 
-public class LoginPage {
+
+import org.testng.Assert;
+
+//import utilities.DriverFactory;
+
+public class LoginPage extends BasePage {
 	
-	 private WebDriver driver;
+	  public LoginPage() {
+	        super();
+	        PageFactory.initElements(driver, this);
+	    }
+	
 
-	    // Constructor to initialize elements using PageFactory
-	  
-
-	    // Web elements using @FindBy annotation (Page Factory)
 	    @FindBy(name = "email")
 	    private WebElement usernameField;
 
@@ -24,11 +29,27 @@ public class LoginPage {
 	    @FindBy(xpath="//*[@data-qa='login-button']")
 	    private WebElement LoginBtn;
 	    
+
 	    
-	    public LoginPage(WebDriver driver) {
-	        this.driver = DriverFactory.getDriver();
-	        PageFactory.initElements(driver, this); // Initializes all @FindBy elements
-	    }
+	  
+
+	    @FindBy(xpath="//*[@name='name']")
+	    private WebElement username;
+	    
+	    @FindBy(xpath="//*[@data-qa='signup-email']")
+	    private WebElement email;
+	    
+	    @FindBy(xpath="//*[text()='New User Signup!']")
+	    private WebElement signup_text;
+	    
+	    @FindBy(xpath="//*[text()='Signup']")
+	    private WebElement signup_button;
+	    
+	    
+	    
+	    
+
+
 
 	    // Action methods with Java encapsulation
 	    public void enterUsernameAndpassword(String username,String password) {
@@ -37,8 +58,10 @@ public class LoginPage {
 	    }
 	    
 	    
-	    public String pageTitleVerify() {
-	          return driver.getTitle();
+
+	    public boolean pageTitleVerify() {
+	          String title=driver.getTitle();
+	          return title.contains("Automation Exercise - Signup / Login");
 	    }
 	    
 	    
@@ -48,15 +71,28 @@ public class LoginPage {
 	    
 	    
 	    public WebElement getElement(String elementName) {
-			switch(elementName.toLowerCase()) {
-			case "LoginBtn":
-				return LoginBtn;
-			case "cart":
-				return passwordField;
+
 			
-			default: throw new IllegalArgumentException("no such element in this page");
-			}
-		}
+
+	        switch (elementName.toLowerCase()) {
+	            case "username":
+	                return username;
+	            case "email":
+	                return email;
+	            case "loginbtn":
+	                return LoginBtn;
+	            case "usernamefield":
+	                return usernameField;
+	            case "passwordfield":
+	                return passwordField;
+	            case "signup header":
+	            	return signup_text;
+	            case "signup":
+	            	return signup_button;
+	            default:
+	                throw new IllegalArgumentException("No such element: " + elementName);
+	        }
+	    }
 
 	    public void enterPassword(String password) {
 	        passwordField.sendKeys(password);

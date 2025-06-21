@@ -19,9 +19,13 @@ public class HomeSteps {
 	
 	private WebDriver driver;
 	
-	private HomePage hp=new HomePage(DriverFactory.getDriver());;
+
 	
-	private LoginPage lp=new LoginPage(DriverFactory.getDriver());
+	
+	private HomePage hp=new HomePage();;
+	
+	private LoginPage lp=new LoginPage();
+
 	
 	
 	@Then("user verify Headers")
@@ -76,14 +80,17 @@ public class HomeSteps {
 	@Then("user navigated to login page")
 	public void user_navigated_to_login_page() {
 		//lp=new LoginPage(driver);
-		String title=lp.pageTitleVerify();
-		Assert.assertEquals(title,"Automation Exercise - Signup / Login");
+
+		boolean title=lp.pageTitleVerify();
+		Assert.assertTrue(title);
+
 		LoggerUtil.info("user navigates to login page");
 	}
 	
 	@Then("user navigated to Automation Homepage")
 	public void user_navigated_to_Automation_Homepage() {
 		String page=hp.getTitle();
+
 		Assert.assertEquals(page,"Automation Exercise");
 		LoggerUtil.info("User navigated to the home page");
 	}

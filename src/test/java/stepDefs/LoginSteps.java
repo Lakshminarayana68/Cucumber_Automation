@@ -32,7 +32,10 @@ public class LoginSteps  {
 	        driver = DriverFactory.initDriver();
             driver.get(ConfigReader.getProperty("url"));
 	    	
-	        loginPage = new LoginPage(driver);
+
+
+	        loginPage = new LoginPage();
+
 	       LoggerUtil.info("User launches app");
 	       
 	        

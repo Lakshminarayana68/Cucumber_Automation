@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+<<<<<<< HEAD
   <parameter name="browser" value="firefox"/>
   <parameter name="platform" value="linux"/>
+=======
+>>>>>>> 776f272 (code changes)
   <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="runners.TestRunner">
         <methods>
           <include name="teardown"/>
           <include name="setUpClass"/>
+<<<<<<< HEAD
           <include name="runScenario" invocation-numbers="0"/>
+=======
+          <include name="runScenario"/>
+>>>>>>> 776f272 (code changes)
           <include name="tearDownClass"/>
           <include name="setup"/>
         </methods>

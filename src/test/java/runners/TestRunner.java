@@ -24,7 +24,10 @@ import utilities.DriverFactory;
 	        plugin = {"pretty",
 	                
 	                "listeners.CustomExtentReporter"},
-	        tags= "@addtoCart"
+
+	        tags= "@signup"
+
+
 	        
 	)
 	public class TestRunner extends AbstractTestNGCucumberTests {
