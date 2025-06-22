@@ -12,7 +12,7 @@ pipeline {
     }
 
     environment {
-        REPORT_DIR = "target/Reports"  // Updated to match report archive location
+        REPORT_DIR = "test-output\\ExtentReports"
     }
 
     options {
@@ -58,28 +58,45 @@ pipeline {
         stage('Archive Test Reports') {
             steps {
                 echo "Archiving ExtentReports and test results..."
-                archiveArtifacts artifacts: "${env.REPORT_DIR}/ExtentReport.html", allowEmptyArchive: true
+                archiveArtifacts artifacts: 'target/Reports/ExtentReport.html', allowEmptyArchive: true
                 junit 'target\\surefire-reports\\*.xml'
             }
         }
 
+        //New stage: Publish HTML Report
+        stage('Publish HTML Report') {
+            steps {
+                echo "Publishing HTML Extent Report..."
+                publishHTML(target: [
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/Reports',
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Extent Report'
+                ])
+            }
+        }
+
+        //Modified Email Notification with clickable report link
         stage('Send Email Notification') {
             steps {
-                echo "Sending email with attached test report..."
+                echo "Sending email notification..."
                 emailext(
-                    subject: "Jenkins Build: ${currentBuild.currentResult} - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                    body: """
-                        <p>Hello Team,</p>
-                        <p><b>Build Status:</b> ${currentBuild.currentResult}</p>
-                        <p><b>Project:</b> ${env.JOB_NAME}</p>
-                        <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-                        <p><b>Browser:</b> ${params.BROWSER}</p>
-                        <p><b>Tags:</b> ${params.TAGS}</p>
-                        <p><b>Extent Report:</b> <a href="${env.BUILD_URL}artifact/${env.REPORT_DIR}/ExtentReport.html">Click to View</a></p>
-                        <p>Regards,<br>Jenkins</p>
-                    """,
-                    mimeType: 'text/html',
-                    attachmentsPattern: "${env.REPORT_DIR}/ExtentReport.html",
+                    subject: "Build ${currentBuild.currentResult}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: """Hello Team,
+
+Build Result: ${currentBuild.currentResult}
+Project: ${env.JOB_NAME}
+Build Number: ${env.BUILD_NUMBER}
+Executed on Browser: ${params.BROWSER}
+Tags Used: ${params.TAGS}
+
+Extent Report: ${env.BUILD_URL}Extent_20Report/
+
+Regards,
+Jenkins
+""",
                     to: 'adityasr2278@gmail.com'
                 )
             }
