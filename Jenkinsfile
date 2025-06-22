@@ -58,7 +58,7 @@ pipeline {
         stage('Archive Test Reports') {
             steps {
                 echo "Archiving ExtentReports and test results..."
-                archiveArtifacts artifacts: 'test-output/ExtentReports/**/*.html', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'target/Reports/ExtentReport.html', allowEmptyArchive: true
                 junit 'target\\surefire-reports\\*.xml'
             }
         }
