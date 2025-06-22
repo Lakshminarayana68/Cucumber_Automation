@@ -58,7 +58,7 @@ pipeline {
         stage('Archive Test Reports') {
             steps {
                 echo "Archiving ExtentReports and test results..."
-                archiveArtifacts artifacts: "${env.REPORT_DIR}\\**\\*.html", allowEmptyArchive: true
+                archiveArtifacts artifacts: 'test-output/ExtentReports/**/*.html', allowEmptyArchive: true
                 junit 'target\\surefire-reports\\*.xml'
             }
         }
@@ -66,7 +66,7 @@ pipeline {
         stage('Send Email Notification') {
             steps {
                 echo "Sending email notification..."
-                mail to: 'team@example.com',
+                mail to: 'adityasr2278@gmail.com',
                      subject: "Jenkins Build: ${currentBuild.currentResult} - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                      body: """Hello Team,
 
