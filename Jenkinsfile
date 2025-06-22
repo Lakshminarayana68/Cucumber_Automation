@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven_Home'     // Make sure this matches your Jenkins Maven tool name
-        jdk 'Java_Home'           // Must match your configured JDK name in Jenkins
+        maven 'Maven_Home'
+        jdk 'Java_Home'
     }
 
     parameters {
@@ -12,7 +12,7 @@ pipeline {
     }
 
     environment {
-        REPORT_DIR = "test-output\\ExtentReports"  // Windows path style
+        REPORT_DIR = "target/Reports"  // Updated to match report archive location
     }
 
     options {
@@ -58,27 +58,30 @@ pipeline {
         stage('Archive Test Reports') {
             steps {
                 echo "Archiving ExtentReports and test results..."
-                archiveArtifacts artifacts: 'target/Reports/ExtentReport.html', allowEmptyArchive: true
+                archiveArtifacts artifacts: "${env.REPORT_DIR}/ExtentReport.html", allowEmptyArchive: true
                 junit 'target\\surefire-reports\\*.xml'
             }
         }
 
         stage('Send Email Notification') {
             steps {
-                echo "Sending email notification..."
-                mail to: 'adityasr2278@gmail.com',
-                     subject: "Jenkins Build: ${currentBuild.currentResult} - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                     body: """Hello Team,
-
-Build Status: ${currentBuild.currentResult}
-Project: ${env.JOB_NAME}
-Build URL: ${env.BUILD_URL}
-Executed on Browser: ${params.BROWSER}
-Tags Used: ${params.TAGS}
-
-Regards,
-Jenkins
-"""
+                echo "Sending email with attached test report..."
+                emailext(
+                    subject: "Jenkins Build: ${currentBuild.currentResult} - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: """
+                        <p>Hello Team,</p>
+                        <p><b>Build Status:</b> ${currentBuild.currentResult}</p>
+                        <p><b>Project:</b> ${env.JOB_NAME}</p>
+                        <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
+                        <p><b>Browser:</b> ${params.BROWSER}</p>
+                        <p><b>Tags:</b> ${params.TAGS}</p>
+                        <p><b>Extent Report:</b> <a href="${env.BUILD_URL}artifact/${env.REPORT_DIR}/ExtentReport.html">Click to View</a></p>
+                        <p>Regards,<br>Jenkins</p>
+                    """,
+                    mimeType: 'text/html',
+                    attachmentsPattern: "${env.REPORT_DIR}/ExtentReport.html",
+                    to: 'adityasr2278@gmail.com'
+                )
             }
         }
     }
