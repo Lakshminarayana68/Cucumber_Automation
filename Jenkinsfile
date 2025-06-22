@@ -24,14 +24,14 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                echo "✅ Cloning repository..."
+                echo "Cloning repository..."
                 checkout scm
             }
         }
 
         stage('Build Project') {
             steps {
-                echo "🛠️ Building project using Maven..."
+                echo "Building project using Maven..."
                 bat 'mvn clean compile'
             }
         }
